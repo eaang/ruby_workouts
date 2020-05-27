@@ -86,5 +86,5 @@ def stop_sign(arr)
   # (ex.)
   # stop_sign(["Hi", "my", "name", "is", "STOP", "Slim", "Shady"])
   # => ["Hi", "my", "name", "is"]
-  arr[0...arr.index('STOP')]
+  arr[0...arr.index("STOP")]
 end

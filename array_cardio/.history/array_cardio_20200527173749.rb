@@ -77,7 +77,9 @@ def acronym(arr)
   # => "G.F."
   # acronym(["Cash", "Rules", "Everything", "Around", "Me"])
   # => "C.R.E.A.M."
-  arr = arr.map { |word| word.chars.first }
+  arr = arr.map do |word|
+    word.chars.first
+  end
   arr.join('.').upcase + '.'
 end
 
@@ -86,5 +88,5 @@ def stop_sign(arr)
   # (ex.)
   # stop_sign(["Hi", "my", "name", "is", "STOP", "Slim", "Shady"])
   # => ["Hi", "my", "name", "is"]
-  arr[0...arr.index('STOP')]
+  arr[0...arr.index("STOP")]
 end

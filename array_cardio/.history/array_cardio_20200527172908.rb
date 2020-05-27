@@ -66,8 +66,7 @@ def all_even_at_start(arr)
   # => [2,2,2,1,3]
   arr2 = []
   arr.each { |num| arr2 << num if num.even? }
-  arr -= arr2
-  arr2 + arr
+
 end
 
 def acronym(arr)
@@ -77,8 +76,6 @@ def acronym(arr)
   # => "G.F."
   # acronym(["Cash", "Rules", "Everything", "Around", "Me"])
   # => "C.R.E.A.M."
-  arr = arr.map { |word| word.chars.first }
-  arr.join('.').upcase + '.'
 end
 
 def stop_sign(arr)
@@ -86,5 +83,7 @@ def stop_sign(arr)
   # (ex.)
   # stop_sign(["Hi", "my", "name", "is", "STOP", "Slim", "Shady"])
   # => ["Hi", "my", "name", "is"]
-  arr[0...arr.index('STOP')]
 end
+
+
+

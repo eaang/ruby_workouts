@@ -48,14 +48,12 @@ def excluded_values(arr, other_arr)
   # gets all non-shared values in two arrays (ex.)
   # merge_arrays(["a", "b", "c"], ["c", "z", "y"])
   # => ["a", "b", "z", "y"]
-  arr & other_arr
 end
 
 def subtraction(arr, other_arr)
   # take away values in arr that are also present in other arr (ex.)
   # subtraction(["a", "b", "c"], ["c", "z", "y"])
   # => ["a", "b"]
-  arr - other_arr
 end
 
 def all_even_at_start(arr)
@@ -64,10 +62,6 @@ def all_even_at_start(arr)
   # => [2,4,6,1,3,5]
   # all_even_at_start([1,2,2,2,3])
   # => [2,2,2,1,3]
-  arr2 = []
-  arr.each { |num| arr2 << num if num.even? }
-  arr -= arr2
-  arr2 + arr
 end
 
 def acronym(arr)
@@ -77,8 +71,6 @@ def acronym(arr)
   # => "G.F."
   # acronym(["Cash", "Rules", "Everything", "Around", "Me"])
   # => "C.R.E.A.M."
-  arr = arr.map { |word| word.chars.first }
-  arr.join('.').upcase + '.'
 end
 
 def stop_sign(arr)
@@ -86,5 +78,7 @@ def stop_sign(arr)
   # (ex.)
   # stop_sign(["Hi", "my", "name", "is", "STOP", "Slim", "Shady"])
   # => ["Hi", "my", "name", "is"]
-  arr[0...arr.index('STOP')]
 end
+
+
+
