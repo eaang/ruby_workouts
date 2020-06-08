@@ -14,12 +14,11 @@ end
 
 def all_uppercase(people_list)
   # return the same array, but uppercase all names
-  people_list.map(&:upcase)
+  people_list.
 end
 
 def all_wo_a(people_list)
   # filter out all members of the list that have an "a" on their names
-  people_list.filter { |name| name.include?('a') }
 end
 
 def all_even_surnames(people_list)
@@ -27,7 +26,6 @@ def all_even_surnames(people_list)
   # "Jimenez, Miguel" => false, jimenez has 7 characters
   # "Aulia, Prima" => false, aulia has 5 characters
   # "Tang, Rachel" => true, tang has 4 characters
-  people_list.select { |person| person.slice(/\w*(?=,)/).length.even? }
 end
 
 def only_first_names(people_list)
@@ -35,16 +33,12 @@ def only_first_names(people_list)
   # "Tolkien, J.R.R." => false
   # "Jay-Z" => true
   # "Prince" => true
-  people_list.reject { |name| name.include?(',') }
 end
 
-def first_and_last(people_list)
+def first_and_last
   # transform the list format from
   # ["last_name, first_name"]
   # ["first_name, last_name"]
-  people_list.map do |name|
-    name.split(', ').reverse.join(', ')
-  end
 end
 
 # WORKOUT 🏋 - run rspec in your terminal to check your results

@@ -35,16 +35,13 @@ def only_first_names(people_list)
   # "Tolkien, J.R.R." => false
   # "Jay-Z" => true
   # "Prince" => true
-  people_list.reject { |name| name.include?(',') }
+  people_list.select { |name| !name.include?(',') }
 end
 
-def first_and_last(people_list)
+def first_and_last
   # transform the list format from
   # ["last_name, first_name"]
   # ["first_name, last_name"]
-  people_list.map do |name|
-    name.split(', ').reverse.join(', ')
-  end
 end
 
 # WORKOUT 🏋 - run rspec in your terminal to check your results

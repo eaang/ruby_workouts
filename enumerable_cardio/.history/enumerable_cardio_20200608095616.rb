@@ -42,7 +42,7 @@ def first_and_last(people_list)
   # transform the list format from
   # ["last_name, first_name"]
   # ["first_name, last_name"]
-  people_list.map do |name|
+  people_list.each do |name|
     name.split(', ').reverse.join(', ')
   end
 end
