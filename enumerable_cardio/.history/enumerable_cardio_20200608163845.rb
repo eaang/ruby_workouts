@@ -84,8 +84,10 @@ def number_of_quotes_grouped_by_author(quote_list, number_of_quotes)
   result = []
   quotes = quote_list.map { |quote| quote[:from].to_sym }
   quotes.each { |name| counts[name.to_s] += 1 }
-  counts.each do |key, value|
-    result << { key => value } if value > number_of_quotes
+  counts.each do |key, value| 
+    result <<  {key => value} if value > number_of_quotes
   end
   result
 end
+
+p number_of_quotes_grouped_by_author(QUOTES, 3)

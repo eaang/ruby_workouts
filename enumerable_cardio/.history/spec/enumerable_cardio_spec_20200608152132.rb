@@ -18,21 +18,20 @@ context do "Enumerable Cardio!"
     end
   end
 
-  describe "#count_quotes_without_surnames" do
-    it "fetches the total number of quotes without surnames" do
-      correct_answer = 11
-      expect(count_quotes_without_surnames(QUOTES)).to eq(correct_answer)
+  describe "#count_fail_quotes" do
+    it "fetches the total number of quotes containing the string 'fail'" do
+      correct_answer = 16
+      expect(count_fail_quotes(QUOTES)).to eq(correct_answer)
     end
   end
 
   describe "#find_a_quote" do
-    it "gets the right quote for Albert Einstein" do
+    it "gets the right quote for Albert Einstein"
       correct_answer = {:text=>"Imagination is more important than knowledge.", :from=>"Albert Einstein"}
       expect(find_a_quote(QUOTES, "Albert Einstein")).to eq(correct_answer)
 
       correct_answer_two = {:text=>"“Hire character. Train skill.", :from=>"Peter Schultz"}
-      expect(find_a_quote(QUOTES, "Peter Schultz")).to eq(correct_answer_two)
-    end
+      expect(find_a_quote(QUOTES, "Albert Einstein")).to eq(correct_answer_two)
   end
 
 

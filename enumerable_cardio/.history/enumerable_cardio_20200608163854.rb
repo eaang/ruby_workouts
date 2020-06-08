@@ -89,3 +89,5 @@ def number_of_quotes_grouped_by_author(quote_list, number_of_quotes)
   end
   result
 end
+
+p number_of_quotes_grouped_by_author(QUOTES, 3)

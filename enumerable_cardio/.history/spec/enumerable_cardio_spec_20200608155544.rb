@@ -31,7 +31,7 @@ context do "Enumerable Cardio!"
       expect(find_a_quote(QUOTES, "Albert Einstein")).to eq(correct_answer)
 
       correct_answer_two = {:text=>"“Hire character. Train skill.", :from=>"Peter Schultz"}
-      expect(find_a_quote(QUOTES, "Peter Schultz")).to eq(correct_answer_two)
+      expect(find_a_quote(QUOTES, "Albert Einstein")).to eq(correct_answer_two)
     end
   end
 
